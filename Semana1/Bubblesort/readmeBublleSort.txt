@@ -1,5 +1,6 @@
 BubbleSort
-Em uma dada iteração, quando nenhuma troca é realizada, o vetor já está ordenado e o processo de ordenação pode ser interrompido. O algoritmo acima conta o número de iterações realizadas pelo algoritmo BubbleSort dada uma entrada.
+Em uma dada iteração, quando nenhuma troca é realizada, o vetor já está ordenado e o processo de ordenação pode ser interrompido. 
+O algoritmo acima conta o número de iterações realizadas pelo algoritmo BubbleSort dada uma entrada.
 
 Entrada
 A primeira linha contém o inteiro N (1 <= N <= 5000)denotando o número de elementos do vetor A.
