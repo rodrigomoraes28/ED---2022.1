@@ -1,0 +1,36 @@
+Mitos
+João é um grande caçador de mitos. Ele vai apresentar o mito que diz que "os raios não caem duas vezes no mesmo lugar". A cidade de Quixadá é a cidade com a maior ocorrência de raios do mundo. João conseguiu um relatório com as ocorrências de cada raio na cidade nos últimos 5 anos.
+
+A cidade de Quixadá tem 500 metros de largura e 500 comprimento, ela será dividida em 250.000 quadrantes. O sistema de registro armazena o quadrante em que o raio caiu. Como os quadrantes são relativamente pequenos, João decidiu que se dois raios caírem no mesmo quadrante então pode-se considerar que caíram no mesmo lugar.
+
+Tarefa
+
+Construa um TAD Raios com os seguintes métodos:
+
+Raio(int n, int m): construtor que recebe a largura e o comprimento da cidade.
+add(X,Y): armazena que caiu o raio no quadrante X,Y.
+mesmo_lugar() : devolve 1 se dois raios caíram no mesmo lugar e 0 caso contrário.
+A implementação do seu TAD deve ser feita diretamente no arquivo cabeçalho Raios.hpp.
+
+Entrada
+
+A primeira linha da entrada contém um número inteiro N (2 \leq N \leq 500.0002≤N≤500.000) representando o número de
+registros de raios no relatório. Cada uma das NN linhas seguintes contém 2 números inteiros X, YX,Y (0 \leq X, Y \leq 5000≤X,Y≤500), representando o registro de um raio que caiu no quadrante cujas coordenadas são (X, Y)(X,Y).
+
+Saída
+
+Seu programa deve imprimir, o número 0 se nenhum raio caiu no mesmo lugar, ou o número 1
+caso contrário. Note que você deve imprimir o número 1 mesmo que haja mais do que 1 par de raios que caíram
+no mesmo lugar.
+
+Exemplo de Entrada
+
+5
+1 1
+2 3
+3 3
+4 2
+4 4
+Exemplo de Saída
+
+0
