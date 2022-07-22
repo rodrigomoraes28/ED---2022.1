@@ -1,0 +1,8 @@
+Conjuntos Disjuntos
+Construa uma TAD Disjuntos com os seguintes métodos:
+
+Disjuntos(N): construtor que recebe um N representando o número de elementos iniciais representados pelos números 0 até N-1.
+
+une(i,j): os elementos ii e jj se tornam os mesmos.
+
+mesmo(i,j): devolve 1 se i e j são os mesmos, caso contrário, devolve 0.
