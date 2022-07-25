@@ -1,0 +1,94 @@
+Mínimo d pilha
+Projete a estrutura de dados pilha que suporte todas as operações de pilha como push(), pop(), empty() e adicionalmente a operação getmin() que devolve o menor elemento presente na pilha. A operação getmin() deve ser executada em O(1)O(1), a complexidade de espaço extra pode ser O(n)O(n).
+
+Dica: Utilize duas pilhas. Uma pilha será usada para guardar os elementos da estrutura de dados e a segunda pilha será utilizada para guardar o menor elemento presente na pilha.
+
+Entrada
+
+A primeira linha da entrada contém um inteiro N representando o número de operações realizadas com a pilha. Cada operação será descrita por um inteiro e um parâmetro:
+
+1 X : push(X)
+2 : pop()
+3 : getmin()
+Saída
+
+A saída é composta pelo resultado da operações getmin().
+
+Entrada
+
+8
+1 3
+1 4
+1 2
+3
+2
+3
+2
+3
+Saída
+
+2
+3
+3
+Modifique o seguinte programa:
+
+#include <iostream>
+#include <stack>
+using namespace std;
+
+template <class T>
+class StackMin{
+    private:
+        stack <T> data;
+        stack <T> min;
+    public:
+
+        void push(T x)
+        {
+            
+        }
+
+        bool empty()
+        {
+            
+        }
+
+        T top(){
+            
+        }
+
+        void pop()
+        {
+            
+        }
+
+        T getmin()
+        {
+            
+        }
+
+};
+
+
+int main()
+{
+    int n;
+    StackMin <int> s;
+
+    cin >> n;
+
+    for(int i = 0; i < n; i++){
+        int op, x;
+        cin >> op;
+        
+        if(op==1){
+            cin >> x;
+            s.push(x);
+        }else if(op==2){
+            s.pop();
+        }else{
+            cout << s.getmin() << endl;
+        }
+
+    }
+}
