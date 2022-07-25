@@ -1,0 +1,103 @@
+Notação Polonesa Reversa
+A notação polonesa foi proposta pelo lógico polonês Jan Łukasiewicz em 1924. Nessa notação, os operadores aparecem antes dos seus operandos.
+
+Já a notação polonesa reversa foi proposta em 1954 por Arthur Burks, Don Warren e Jesse Wright e de maneira independente em 1961 por Friedrich L. Bauer e Edsger W. Dijkstra para auxiliar no processo de avaliação de expressões nas linguagens de programação.
+
+Uma expressão na notação polonesa reversa não precisa utilizar parênteses uma vez que cada operador tem um número fixo de operando. Além disso, não precisamos definir regras de precedência e/ou associatividade dos operadores.
+
+Uma expressão na notação polonesa reversa pode ser avaliada facilmente com o auxílio de uma pilha.
+
+Tarefa
+
+Sua tarefa será avaliar uma expressão na notação polonesa reversa os operandos e operadores são separados por um espaço em branco. Os operadores podem ser +,-,* e /. O último operador será considerado a divisão inteira.
+
+Entrada
+
+A primeira linha da entrada contém uma expressão na notação polonesa reversa. Os operandos e operadores serão separados por um espaço.
+
+Saída
+
+Seu programa deve imprimir o valor da expressão na notação polonesa reversa
+
+Exemplo de Entrada
+
+14 2 +
+Exemplo de Saída
+
+16
+Exemplo de Entrada
+
+2 3 4 5 * + * 4 +
+Exemplo de Saída
+
+50
+Você pode utilizar o seguinte código como base:
+
+#include <iostream>
+#include <string>
+#include <ctype.h>
+#include <stack>
+using namespace std;
+
+string expr;
+int pos = 0;
+
+string get_token()
+{
+    string token = "";
+    
+    if(pos == expr.size() ){
+        token = "$";
+        return token;
+    }
+    
+    while( expr[pos] == ' ') pos++;
+
+    if(expr[pos] == '+' || expr[pos] == '-' || expr[pos] == '/' || expr[pos] == '*'){
+        token = token + expr[pos];
+        pos = pos + 1;
+        return token;
+    }
+    else if(isdigit(expr[pos]) ){
+        while( isdigit(expr[pos]) ){
+            token = token + expr[pos];
+            pos = pos + 1;
+        }
+        return token;
+    }
+
+    return token;
+}
+
+int main(){
+    
+    
+    getline( cin, expr );
+    stack <int> s;
+    string token = get_token();
+    while(token != "$"){
+                
+        if( token == "+" )
+        {
+            
+        }
+        else if( token == "-" )
+        {
+            
+        }
+        else if( token == "*" )
+        {
+        
+        }
+        else if( token == "+")
+        {
+        
+        }
+        else {
+            //s.push( atoi(token.c_str() ) );
+        }
+
+        token = get_token();
+        
+    }
+}
