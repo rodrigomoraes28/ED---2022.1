@@ -1,0 +1,69 @@
+Próximo Maior
+Dado um vetor A de n inteiros. Compute o valor prox_maior(X) definido da seguinte maneira:
+
+prox_maior(i) : j é o menor índice j tal que i < j < n e A[j] > A[i].
+
+Você precisa calcular o prox_maior para cada índice i do vetor A para 0 <= i < n. Se tal número não existe, atribua o valor -1.
+
+Por exemplo, considere o vetor A = [3,7,1,7,8,4,5,2], temos os seguintes valores:
+
+i	A	prox_maior
+0	3	1
+1	7	4
+2	1	3
+3	7	4
+4	8	-1
+5	4	6
+6	5	-1
+7	2	-1
+Entrada
+
+A primeira linha da entrada contém um inteiro N denotando o tamanho do vetor A. Cada uma das N linhas seguintes contém um inteiro onde o inteiro na i-ésima linha denota A[i].
+
+Saída
+
+Imprima N números separados por espaço em uma única linha, onde o i-ésimo inteiro denota o prox_maior(i).
+
+Exemplo de Entrada
+
+8
+3
+7
+1
+7
+8
+4
+5
+2
+Exemplo de Saída
+
+1 4 3 4 -1 6 -1 - 1
+Exemplo de Entrada
+
+10
+8 
+5 
+2 
+6 
+7 
+9 
+4 
+3 
+7 
+6
+Exemplo de Saída
+
+5 3 3 4 5 -1 8 8 -1 -1 
+Dica:
+
+Utilize uma pilha para guardar os índices dos elementos que ainda não foram calculados o valor do prox_maior.
+A cada novo elemento do vetor, verifique se os elementos cujos índices estão na pilha são menores que o novo elemento. Caso a resposta seja positiva, o prox_maior acabou de ser encontrado.
+i	A	pilha	
+0	3	[0]	
+1	7	[1]	prox_maior[0] = 1
+2	1	[1 2]	
+3	7		prox_maior[2] = 3
+4	8	[4]	prox_maior[1] = 4
+5	4	[4 5]	
+6	5	[4 6]	prox_maior[5] = 6
+7	2	[4 6 7]	prox_maior[7]=-1, prox_maior[6]=-1, prox_maior[4]=-1
