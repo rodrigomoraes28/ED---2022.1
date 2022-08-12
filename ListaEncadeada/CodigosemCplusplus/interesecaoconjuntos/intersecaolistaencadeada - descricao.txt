@@ -1,0 +1,23 @@
+Intersecção de duas listas encadeadas
+Dadas duas listas ordenadas em ordem crescente, crie uma nova lista representando a interseção das duas listas. A nova lista deve ser feita com memória própria - as listas originais não devem ser alteradas.
+
+Observação: os elementos da lista não são necessariamente distintos.
+
+Exemplo 1:
+
+Entrada:
+
+L1 = 1->2->3->4->6
+L2 = 2->4->6->8
+Saída
+
+2->4->6
+Exemplo 2:
+
+Entrada:
+
+L1 = 10->10->20->40->50
+L2 = 10->15->40
+Saída
+
+10->40
