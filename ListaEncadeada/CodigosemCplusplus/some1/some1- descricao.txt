@@ -1,0 +1,92 @@
+Some 1
+Considere um número N com até 1000 dígitos representado como uma lista encadeada tal que cada dígito de N representa um nó da lista encadeada. Você precisa incrementa o número N em 1.
+
+Exemplo 1:
+
+Entrada:
+
+Lista : 4->5->6->nullptr
+Saída
+
+Lista : 4->5->7->nullptr
+Exemplo 2:
+
+Entrada:
+
+Lista : 1->2->9->nullptr
+Saída
+
+Lista : 1->3->0->nullptr
+Exemplo 3:
+
+Entrada:
+
+Lista : 1->9->9->nullptr
+Saída
+
+Lista : 2->0->0->nullptr
+#include <iostream>
+#include <vector>
+#include <cassert>
+
+using namespace std;
+
+class ListNode {
+    public:
+
+    int val;
+    ListNode *next;
+    
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {} 
+};
+
+ 
+ListNode* readList(){
+    int n;
+    cin >> n;
+    ListNode * head;
+    for(int i = 0; i < n; i++){
+        ListNode * ptr;
+        int x;
+        cin >> x;
+        if( i == 0){
+            head = new ListNode(x);
+            ptr = head;
+        }else{
+            ptr->next = new ListNode(x, nullptr);
+            ptr = ptr->next;
+        }
+    }
+
+    return head;
+
+}
+
+void print_list(ListNode * head){
+
+    for(auto ptr = head; ptr != nullptr; ptr = ptr->next){
+        cout << ptr->val << endl;
+    }
+
+}
+
+bool someAuxAux(ListNode * head){
+        
+}
+
+ListNode* someUm(ListNode *head){
+
+} 
+
+
+
+
+int main(){
+    
+    ListNode * head = readList();
+    head = someUm(head);
+    print_list(head);
+    return 0;    
+}
