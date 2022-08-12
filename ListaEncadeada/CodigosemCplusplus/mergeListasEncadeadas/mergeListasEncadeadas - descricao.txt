@@ -1,0 +1,13 @@
+Merge duas listas encadeadas ordenadas
+Dado duas cabeças de duas listas encadeadas ordenadas, list1 e list2.
+
+Mescle as duas listas em uma única lista ordenada.
+
+Retorne a cabeça da lista encadeada mesclada.
+
+Exemplo:
+
+Exemplo1
+
+Entrada: list1 = [1,2,4], list2 = [1,3,4]
+Saída: [1,1,2,3,4,4]
