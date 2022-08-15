@@ -1,0 +1,79 @@
+@044 L2 - Carregando árvore a partir de String
+Descrição
+Testes
+Ajuda
+Código base
+
+
+Descrição
+Leia a string que representa a árvore serializada.
+Você deve construir a árvore a partir da string implemetando corretamente o construtor do código de partida.
+Você pode entender a lógica de serialização no seguinte link.
+A saída é a árvore percorrida in-order, mas já está implementado no código de partida.
+Testes
+>>>>>>>> um
+4 # # 
+========
+[ 4 ]
+<<<<<<<<
+
+>>>>>>>> dois
+1 # 0 # # 
+========
+[ 1 0 ]
+<<<<<<<<
+
+>>>>>>>> tres
+4 # 8 2 # # # 
+========
+[ 4 2 8 ]
+<<<<<<<<
+
+>>>>>>>> quatro
+0 9 4 # # # 5 # # 
+========
+[ 4 9 0 5 ]
+<<<<<<<<
+
+>>>>>>>> cinco
+0 4 # # 2 0 # # 3 # # 
+========
+[ 4 0 0 2 3 ]
+<<<<<<<<
+
+>>>>>>>> seis
+2 0 0 # # # 3 # 7 # 9 # # 
+========
+[ 0 0 2 3 7 9 ]
+<<<<<<<<
+
+>>>>>>>> dez
+1 8 7 # # 4 # 6 # # 5 0 # # 9 # 3 2 # # # 
+========
+[ 7 8 4 6 1 0 5 9 2 3 ]
+<<<<<<<<
+Ajuda
+Você pode utilizar o código a seguir como ponto de partida. O método bshow da árvore imprime a árvore em um formato amigável. Você pode utilizá-lo para conferir se seu código está funcionando corretamente.
+
+Para o caso da árvore do último teste, temos essa saída.
+
+//serial
+1 8 7 # # 4 # 6 # # 5 0 # # 9 # 3 2 # # #
+
+//bshow()
+    ┌───7
+┌───8
+│   │   ┌───#
+│   └───4
+│       └───6
+1
+│   ┌───0
+└───5
+    │   ┌───#
+    └───9
+        │   ┌───2
+        └───3
+            └───#
+Para simplificar o código, estou utilizando a convenção __ para expressar quais são os métodos privados, própria do python.
+
+Os locais onde você deve colocar seu código estão marcados com //TODO. Como estamos lidando com árvores, você deverá criar também os métodos recursivos para realizar a operação de construção da árvore.
